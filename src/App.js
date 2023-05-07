@@ -4,7 +4,7 @@ import { Panel } from './pages/panel.jsx';
 
 export default function App() {
   return (
-    <div id="corpo">
+    <div id="corpo">      
       <Panel />
     </div>
   );
