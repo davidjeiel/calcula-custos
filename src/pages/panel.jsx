@@ -12,7 +12,11 @@ import { MateriaPrima } from './forms/MateriaPrima';
 
 export function Panel(params) 
 {
-  const [produto, setProduto] = useState();
+  const [produto, setProduto] = useState({
+    nome:"",
+    valor: "",
+    quantidade:""
+  });
   const [materiaPrima, setMateriaPrima ] = useState([]);
 
   return (
@@ -24,9 +28,18 @@ export function Panel(params)
         </Card.Header>
         <Card.Body>
           <Container>                        
-            <Produto />
-            <MateriaPrima />
-            <Lista />
+            <Produto 
+              produto={produto}
+              setProduto={setProduto}
+            />
+            <MateriaPrima 
+              materiaPrima={materiaPrima}
+              setMateriaPrima={setMateriaPrima}
+            />
+            <Lista 
+               materiaPrima={materiaPrima}
+               setMateriaPrima={setMateriaPrima}
+            />
           </Container>
         </Card.Body>
       </Card>

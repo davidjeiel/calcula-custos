@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Lista(params)
+export function Lista({materiaPrima, setMateriaPrima})
 {
     return(                                 
         <table className="table table-bordered table-striped table-hover mt-2">
@@ -13,14 +13,18 @@ export function Lista(params)
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td  className="text-center" style={{ paddingTop: "1.2%" }}>teste</td>
-                    <td  className="text-center" style={{ paddingTop: "1.2%" }}>teste</td>
-                    <td  className="text-center" style={{ paddingTop: "1.2%" }}>teste</td>
-                    <td  className="text-center">
-                        <input className="form-control"/>
-                    </td>
-                </tr>
+                {
+                    materiaPrima.map((materia)=>{
+                        <tr>
+                            <td  className="text-center" style={{ paddingTop: "1.2%" }}>{ materia.nome }</td>
+                            <td  className="text-center" style={{ paddingTop: "1.2%" }}>{ materia.tipo }</td>
+                            <td  className="text-center" style={{ paddingTop: "1.2%" }}>{ materia.quantidade }</td>
+                            <td  className="text-center">
+                                <input className="form-control" value={ materia.quantidade }/>
+                            </td>
+                        </tr>
+                    })
+                }
             </tbody>
         </table>
     )
