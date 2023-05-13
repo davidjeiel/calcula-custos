@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export function Lista({materiaPrima, setMateriaPrima})
 {
@@ -14,17 +14,20 @@ export function Lista({materiaPrima, setMateriaPrima})
             </thead>
             <tbody>
                 {
-                    materiaPrima.map((materia)=>{
-                        <tr>
-                            <td  className="text-center" style={{ paddingTop: "1.2%" }}>{ materia.nome }</td>
-                            <td  className="text-center" style={{ paddingTop: "1.2%" }}>{ materia.tipo }</td>
-                            <td  className="text-center" style={{ paddingTop: "1.2%" }}>{ materia.quantidade }</td>
-                            <td  className="text-center">
-                                <input className="form-control" value={ materia.quantidade }/>
-                            </td>
-                        </tr>
-                    })
-                }
+                    useEffect(()=>{
+                        materiaPrima.map((materia)=>{
+                            <tr>
+                                <td  className="text-center" style={{ paddingTop: "1.2%" }}>{ materia.nome }</td>
+                                <td  className="text-center" style={{ paddingTop: "1.2%" }}>{ materia.tipo }</td>
+                                <td  className="text-center" style={{ paddingTop: "1.2%" }}>{ materia.quantidade }</td>
+                                <td  className="text-center">
+                                    <input className="form-control" value={ materia.quantidade }/>
+                                </td>
+                            </tr>
+                        })
+                    
+                    },[materiaPrima])
+                }    
             </tbody>
         </table>
     )
