@@ -7,12 +7,12 @@ export function MateriaPrima({materiaPrima, setMateriaPrima}) {
   const [quantidade, setQuantidade] = useState('');
   const [valor, setValor] = useState('')
 
-
   const handleCadastro = ()=>{
     const newMateriaPrima = [
       ...materiaPrima, 
       { 
         "id": uniqid(),
+        "key": uniqid(),
         "nome": nome, 
         "tipo": tipo, 
         "quantidade": quantidade, 
@@ -20,7 +20,6 @@ export function MateriaPrima({materiaPrima, setMateriaPrima}) {
       }
     ];
     setMateriaPrima( newMateriaPrima ) ;
-    console.debug(materiaPrima);
   }
 
   return (
