@@ -5,16 +5,14 @@ export function Produto({produto, setProduto})
 {
     const [nome, setNome] = useState('');
     const [valor, setValor] = useState('');
-    const [quantidade, setQuantidade] = useState('');
 
     useEffect(()=>{
         setProduto({
             "nome": nome,
-            "valor": valor,
-            "quantidade": quantidade
+            "valor": valor
         });
         console.debug(produto);
-    }, [nome, valor, quantidade])
+    }, [nome, valor ])
 
     return(
         <div className="input-group" style={{height: "75px"}}>
@@ -35,14 +33,7 @@ export function Produto({produto, setProduto})
                 placeholder="Valor de venda"
                 id="valor_produto"
                 onChange={(e)=>setValor(e.target.value)}
-                />
-            <input 
-                className="form-control" 
-                value={produto.quantidade} 
-                placeholder="Quantidade vendida por mês"
-                id="quantidade_produto"
-                onChange={(e)=>setQuantidade(e.target.value)}
-            /> 
+            />
         </div>
     )
 }
