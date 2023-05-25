@@ -9,21 +9,28 @@ export function LinhaMateriaPrima({
     materiaPrima,
     setMateriaPrima
 }){
-
     const handleTrash = (id)=>{
-        let arr  = materiaPrima;    
-        // FIXME: Corrigir a função de exclusão dos itens, RETIRANDO APENAS O SELECIONADO
-        let novaLista = arr.splice( arr.filter( sel=> sel.id === id ), 1);        
+        let arr  = materiaPrima; 
+        let novaLista = arr.splice( arr.filter( sel=> sel.id !== id ), 1);        
         setMateriaPrima( novaLista )  ;
     }
 
+    // FIXME: Ajustar a função de adição das frações
+    const handleFragment = id =>{
+        let arr  = materiaPrima; 
+        console.debug(arr);
+        let elementoAlterado =  arr.filter( sel=> sel.id === id , arr.push({"fracao": ""}));        
+        console.debug( elementoAlterado )  ;
+    }
     return(
         <tr key={key} id={ id }>
                 <td  className="text-center" style={{ paddingTop: "1.2%" }}>{ nome }</td>
                 <td  className="text-center" style={{ paddingTop: "1.2%" }}>{ tipo }</td>
-                
                 <td  className="text-center">
-                    <input className="form-control text-center" />
+                    <input 
+                        className="form-control text-center" 
+                        onChange={()=>handleFragment(id)}
+                    />
                 </td>
                 <td className="mt-2 text-center">
                     <Button variant="secondary" onClick={()=>handleTrash(id)}>
