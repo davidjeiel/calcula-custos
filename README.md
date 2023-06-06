@@ -28,8 +28,32 @@ A aplicação permite que os usuários insiram informações sobre seus produtos
 5. Inicie o servidor local: npm start
 6. Acesse a aplicação em seu navegador: http://localhost:3000
 
+
+ ## Como executar
+
+![GIT](https://img.shields.io/badge/-git-000?&logo=git)
+
+```
+git clone https://github.com/davidjeiel/calcula-custos.git
+```
+
+![SHELL](https://img.shields.io/badge/-shell-000?&logo=shell)
+```
+cd calcula-custos
+```
+
+
+![NPM](https://img.shields.io/badge/-npm-000?&logo=npm)
+
+```
+npm install
+npm start
+```
+
+Após estes passos acesse a aplicação pelo seu navegador, no endereço `http://localhost:3000`
+
 ## Contribuição
 Contribuições são bem-vindas! Se você encontrar algum bug, tiver alguma sugestão ou desejar adicionar uma nova funcionalidade, fique à vontade para abrir uma issue ou enviar um pull request. Antes de enviar um pull request, certifique-se de que seu código esteja aderente às diretrizes de estilo do projeto e que tenha sido devidamente testado.
 
 ### Licença
-Este projeto está licenciado sob a licença MIT. Para mais informações, consulte o arquivo LICENSE.
+Este projeto está licenciado sob a licença MIT.
