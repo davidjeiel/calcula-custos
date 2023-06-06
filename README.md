@@ -20,16 +20,7 @@ A aplicação permite que os usuários insiram informações sobre seus produtos
 ![Bootstrap](https://img.shields.io/badge/-bootstrap-000?&logo=Bootstrap)
 ![Node](https://img.shields.io/badge/-Node-000?&logo=npm)
 
-## Como executar o projeto
-1. Certifique-se de ter o Node.js e o MongoDB instalados em sua máquina.
-2. Clone este repositório: git clone https://github.com/davidjeiel/calcula-custos.git
-3. Navegue até o diretório do projeto: cd calcula-custos
-4. Instale as dependências do projeto: npm install
-5. Inicie o servidor local: npm start
-6. Acesse a aplicação em seu navegador: http://localhost:3000
-
-
- ## Como executar
+## Como executar
 
 ![GIT](https://img.shields.io/badge/-git-000?&logo=git)
 
