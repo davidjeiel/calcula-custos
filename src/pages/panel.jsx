@@ -24,14 +24,14 @@ export function Panel(params)
 
   return (
     <>
-      <div className='container-fluid'>
+      {/* <div className='container-fluid'>
         <div className='card-title'>
           <h2 className='text-uppercase p-2 text-center text-light'>
             Calcule seus custos diretos
           </h2>
         </div>
-        <Header />
-      </div>
+      </div> */}
+      <Header />
       <Card className="blur-card bg-light opacity-75 text-secondary text-center mt-5">
         <Card.Header>
           <h2 className="card-title text-uppercase">informações do Produto</h2>
