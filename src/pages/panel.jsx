@@ -30,8 +30,9 @@ export function Panel(params)
             Calcule seus custos diretos
           </h2>
         </div>
-      </div> */}
+      </div> 
       <Header />
+      */}
       <Card className="blur-card bg-light opacity-75 text-secondary text-center mt-5">
         <Card.Header>
           <h2 className="card-title text-uppercase">informações do Produto</h2>
