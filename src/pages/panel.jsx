@@ -75,13 +75,11 @@ export function Panel(params)
             </Row>
           </Card.Title>
         </Card.Header>
-        <Card.Body>
-          
+        <Card.Body>          
           <Lista 
             materiaPrima={materiaPrima}
             setMateriaPrima={setMateriaPrima}
-          />
-          
+          />          
         </Card.Body>
       </Card>
     </>
